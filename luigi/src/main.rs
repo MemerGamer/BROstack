@@ -7,7 +7,7 @@ fn main() -> std::io::Result<()> {
     let mario = &args[1];
     let giuseppe = &args[2];
     let luigi = "It's a me, Luigi!";
-    let image = "https://raw.githubusercontent.com/MemerGamer/BROstack/main/BROstack.jpg";
+    let image = "https://raw.githubusercontent.com/MemerGamer/BROstack/main/img/BROstack.jpg";
 
     let listener = TcpListener::bind("127.0.0.1:8080")?;
 
