@@ -14,6 +14,10 @@
 
 ![BROstack](./BROstack.jpg)
 
+## Demo
+
+![BROstack](./brostack.gif)
+
 ### Brainfuck
 
 ### Rust
