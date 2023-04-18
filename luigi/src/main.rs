@@ -4,8 +4,10 @@ use std::net::TcpListener;
 
 fn main() -> std::io::Result<()> {
     let args: Vec<String> = env::args().collect();
-    let message1 = &args[1];
-    let message2 = &args[2];
+    let mario = &args[1];
+    let giuseppe = &args[2];
+    let luigi = "It's a me, Luigi!";
+    let image = "https://raw.githubusercontent.com/MemerGamer/BROstack/main/BROstack.jpg";
 
     let listener = TcpListener::bind("127.0.0.1:8080")?;
 
@@ -14,8 +16,7 @@ fn main() -> std::io::Result<()> {
     );
     for stream in listener.incoming() {
         let mut stream = stream?;
-        let response = format!("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE html><html><head><style>body {{color:white; background-image: url('https://pbs.twimg.com/media/Ensf3-JXYAMNHpx?format=jpg&name=4096x4096'); background-repeat: no-repeat; background-position: center center; }}</style></head><div><h1 style='text-align:center'>{}</h1><h1 style='text-align:center'>It's a me, Luigi!</h1><h1 style='text-align:center'>{}</h1></div></body></html>", message1, message2);
-
+        let response = format!("HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE html><html><head><style>*{{ box-sizing: border-box; }} h1{{margin: 0; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}} body,html {{ color:white; height: 99%; background-color:black; }}</style></head><div style='background-image: url(\"{}\"); height:100%; background-repeat: no-repeat; background-size:cover; filter: blur(8px); -webkit-filter: blur(8px); '></div> <div style=\"background-color: rgb(0,0,0); /* Fallback color */background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */ color: white; font-weight: bold; border: 3px solid #000; position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); z-index: 2;width: 80%;padding: 20px; padding-top: 50px; margin-bottom: 10px; text-align: center;\"><h1 style='text-align:center'>{}</h1><h1 style='text-align:center'>{}</h1><h1 style='text-align:center'>{}</h1></div></body></html>", image , mario, luigi, giuseppe);
         let mut writer = BufWriter::new(&mut stream);
         writer.write_all(response.as_bytes())?;
         writer.flush()?;
