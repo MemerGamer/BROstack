@@ -16,7 +16,7 @@
 
 ## Demo
 
-![BROstack](./brostack.gif)
+![BROstack](./BROstack.gif)
 
 ### Brainfuck
 
