@@ -12,13 +12,13 @@
 
 </div>
 
-![BROstack](./BROstack.jpg)
+![BROstack](./img/BROstack.jpg)
 
 ## Disclaimer: this project was inspired by the [CHADstack](https://github.com/ThePrimeagen/CHADstack) project.
 
 ## Demo
 
-![BROstack](./BROstack.GIF)
+![BROstack](./img/BROstack.GIF)
 
 ### Brainfuck
 
