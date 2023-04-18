@@ -14,12 +14,20 @@
 
 ![BROstack](./BROstack.jpg)
 
+## Disclaimer: this project was inspired by the [CHADstack](https://github.com/ThePrimeagen/CHADstack) project.
+
 ## Demo
 
 ![BROstack](./BROstack.GIF)
 
 ### Brainfuck
 
+magic code
+
 ### Rust
 
+the big boy, also btw it's blazingly fast btw
+
 ### Octave
+
+we dont talk about what this language does, because its a langugae where indexes start form 1 lol but nice try
